@@ -1,6 +1,9 @@
-package com.example.militaru_andreea_activitatedam2026;
+package com.example.myapplication;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.CheckBox;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +23,15 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+
+    }
+
+    public void culegeDate(View view) {
+        EditText et=findViewById(R.id.nume_ET);
+        CheckBox cb=findViewById(R.id.eStudent_CB);
+        String nume=et.getText().toString();
+        Boolean eStudent=cb.isChecked();
+
     }
 }

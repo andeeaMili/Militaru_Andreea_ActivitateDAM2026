@@ -1,4 +1,4 @@
-package com.example.militaru_andreea_activitatedam2026;
+package com.example.myapplication;
 
 import org.junit.Test;
 

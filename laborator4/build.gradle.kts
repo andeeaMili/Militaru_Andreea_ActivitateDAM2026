@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.militaru_andreea_activitatedam2026"
+    namespace = "com.example.myapplication"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "com.example.militaru_andreea_activitatedam2026"
+        applicationId = "com.example.myapplication"
         minSdk = 24
         targetSdk = 37
         versionCode = 1

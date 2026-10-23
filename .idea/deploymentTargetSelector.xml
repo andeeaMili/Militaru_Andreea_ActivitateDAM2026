@@ -2,11 +2,15 @@
 <project version="4">
   <component name="deploymentTargetSelector">
     <selectionStates>
-      <SelectionState runConfigName="app">
+      <SelectionState runConfigName="laborator2_3">
         <option name="selectionMode" value="DROPDOWN" />
         <DialogSelection />
       </SelectionState>
-      <SelectionState runConfigName="app.laborator2">
+      <SelectionState runConfigName="laborator4">
+        <option name="selectionMode" value="DROPDOWN" />
+        <DialogSelection />
+      </SelectionState>
+      <SelectionState runConfigName="laborator1">
         <option name="selectionMode" value="DROPDOWN" />
         <DialogSelection />
       </SelectionState>

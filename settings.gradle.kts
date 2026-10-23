@@ -23,5 +23,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Militaru_Andreea_ActivitateDAM2026"
-include(":app")
-include(":app:laborator2")
+include(":laborator2_3")
+include(":laborator4")
