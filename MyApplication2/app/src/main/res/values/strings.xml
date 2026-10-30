@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="esti_student">Esti student?</string>
+    <string name="introduceti_numele">introduceti_numele</string>
+    <string name="apasa">apasa</string>
+    <string name="esti_client_fidel">esti_client_fidel</string>
+    <string name="vinzi_cumperi">Vinzi/Cumperi</string>
+</resources>
