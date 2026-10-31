@@ -1,0 +1,28 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id am_rb
+id am_rbtn
+id am_sp
+id am_sw
+id eStudent_CB
+id main
+id nume_AM
+id nume_ET
+layout activity_adaugare_amanet
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+string apasa
+string app_name
+string esti_client_fidel
+string esti_student
+string introduceti_numele
+string vinzi_cumperi
+style Base.Theme.MyApplication
+style Theme.MyApplication
+xml backup_rules
+xml data_extraction_rules
