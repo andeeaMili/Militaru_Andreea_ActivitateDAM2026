@@ -23,8 +23,11 @@
         </activity>
         <activity
             android:name=".adaugare_amanet"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
+            android:exported="false" />
+
+        <activity
+            android:name=".AmanetListaActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
