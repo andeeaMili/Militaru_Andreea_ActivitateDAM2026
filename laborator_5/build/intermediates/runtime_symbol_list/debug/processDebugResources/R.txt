@@ -3953,6 +3953,7 @@ int id aligned 0x7f08004a
 int id all 0x7f08004b
 int id allStates 0x7f08004c
 int id always 0x7f08004d
+int id amanetTv 0x7f080225
 int id animateToEnd 0x7f08004e
 int id animateToStart 0x7f08004f
 int id antiClockwise 0x7f080050
@@ -4029,6 +4030,7 @@ int id decelerateAndComplete 0x7f080096
 int id decor_content_parent 0x7f080097
 int id default_activity_button 0x7f080098
 int id deltaRelative 0x7f080099
+int id denumieTv 0x7f080226
 int id dependency_ordering 0x7f08009a
 int id design_bottom_sheet 0x7f08009b
 int id design_menu_item_action_area 0x7f08009c
@@ -4546,6 +4548,7 @@ int layout abc_tooltip 0x7f0b001b
 int layout activity_adaugare_amanet 0x7f0b001c
 int layout activity_amanet_lista 0x7f0b001d
 int layout activity_main 0x7f0b001e
+int layout adaptor 0x7f0b0075
 int layout custom_dialog 0x7f0b001f
 int layout design_bottom_navigation_item 0x7f0b0020
 int layout design_bottom_sheet_dialog 0x7f0b0021

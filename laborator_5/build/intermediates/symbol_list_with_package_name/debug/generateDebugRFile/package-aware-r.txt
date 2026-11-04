@@ -3,10 +3,12 @@ color black
 color white
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+id amanetTv
 id btnAdaugare
 id btnLista
 id btnSalveaza
 id cbFideli
+id denumieTv
 id etAdministrator
 id etDenumire
 id etLocatie
@@ -21,6 +23,7 @@ id tvLocatie
 layout activity_adaugare_amanet
 layout activity_amanet_lista
 layout activity_main
+layout adaptor
 layout item_amanet
 mipmap ic_launcher
 mipmap ic_launcher_round

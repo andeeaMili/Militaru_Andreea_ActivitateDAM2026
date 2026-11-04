@@ -2,10 +2,12 @@ int color black 0x0
 int color white 0x0
 int drawable ic_launcher_background 0x0
 int drawable ic_launcher_foreground 0x0
+int id amanetTv 0x0
 int id btnAdaugare 0x0
 int id btnLista 0x0
 int id btnSalveaza 0x0
 int id cbFideli 0x0
+int id denumieTv 0x0
 int id etAdministrator 0x0
 int id etDenumire 0x0
 int id etLocatie 0x0
@@ -20,6 +22,7 @@ int id tvLocatie 0x0
 int layout activity_adaugare_amanet 0x0
 int layout activity_amanet_lista 0x0
 int layout activity_main 0x0
+int layout adaptor 0x0
 int layout item_amanet 0x0
 int mipmap ic_launcher 0x0
 int mipmap ic_launcher_round 0x0
