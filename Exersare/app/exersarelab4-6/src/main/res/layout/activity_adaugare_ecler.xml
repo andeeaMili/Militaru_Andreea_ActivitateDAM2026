@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AdaugareEcler">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hello world"
+
+        />
+<EditText
+    android:id="@+id/editTextTV"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Introduceti numele"
+    android:inputType="text"/>
+<RadioButton
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/radioButtonTV"
+    android:text="Eur"
+    android:checked="true"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Esti client fidel?"
+        android:id="@+id/CheckBoxTV"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="AdaugaEcler"
+        android:text="apasa"/>
+<Spinner
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:id="@+id/SpinnerTV"
+    />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="0.5"
+        android:id="@+id/RatingTV"/>
+<Switch
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Ai alergii?"
+    android:id="@+id/SwitchTV"
+    />
+</LinearLayout>

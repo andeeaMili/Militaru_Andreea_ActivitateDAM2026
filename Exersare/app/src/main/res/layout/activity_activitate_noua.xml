@@ -8,16 +8,18 @@
     tools:context=".ActivitateNoua">
 
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        android:onClick="deschideActivitate"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+   <Button
+       android:id="@+id/buton"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Buton"
+       android:onCLick="deschideActivitate"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+
+       />
 
 
 

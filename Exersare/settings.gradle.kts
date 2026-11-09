@@ -24,4 +24,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Exersare"
 include(":app")
- 
+include(":app:exersarelab4-6")

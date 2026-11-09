@@ -1,0 +1,128 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF5F7"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Éclair Studio"
+            android:textColor="#7D3552"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Creează eclerul tău preferat"
+            android:textColor="#A16B7B"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_marginBottom="28dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Denumirea eclerului"
+            android:textColor="#7D3552"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/aiDenumire"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ex: Ecler cu fistic"
+            android:inputType="textCapSentences"
+            android:padding="14dp"
+            android:backgroundTint="#C97B97" />
+
+        <CheckBox
+            android:id="@+id/aiClientFidel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sunt client fidel"
+            android:buttonTint="#C97B97"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monedă"
+            android:textColor="#7D3552"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <RadioButton
+            android:id="@+id/aiEuro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EUR"
+            android:checked="true"
+            android:buttonTint="#C97B97" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alege umplutura"
+            android:textColor="#7D3552"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <Spinner
+            android:id="@+id/aiUmplutura"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cât de mult îți place?"
+            android:textColor="#7D3552"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp" />
+
+        <RatingBar
+            android:id="@+id/aiRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="0.5"
+            android:rating="3"
+            android:progressTint="#E9A4BA"
+            android:secondaryProgressTint="#E9A4BA" />
+
+        <Switch
+            android:id="@+id/aiAlergii"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Am alergii alimentare"
+            android:thumbTint="#C97B97"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:id="@+id/aiButon"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#B85C7D"
+            android:text="Adaugă eclerul"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:onClick="adaugaEclerAI" />
+
+    </LinearLayout>
+</ScrollView>

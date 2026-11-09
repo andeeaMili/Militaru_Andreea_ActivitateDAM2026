@@ -1,5 +1,7 @@
 package com.example.exersare;
 
+//import static android.os.Build.VERSION_CODES_FULL.R;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -26,25 +28,27 @@ public class ActivitateNoua extends AppCompatActivity {
         });
     }
 
-    public void deschideActivitate(View view) {
-        Intent it=new Intent(this, ActivitateRezultat.class); //intent prin care comunici ce actiune vrei sa faci
-        // this=activite curenta(ActivitateNoua), activitateRezultat=activitate pe care o descriu
-        Bundle bundle=new Bundle(); //bundle->perechi-cheie
+   public void deschideActivitate(View view){
+        Intent it=new Intent(this, ActivitateRezultat.class);
+        Bundle bundle=new Bundle();
         bundle.putString("mesaj", "Mesaj din prima activitate");
         bundle.putInt("numar1", 5);
         bundle.putInt("numar2", 7);
         it.putExtras(bundle);
         startActivity(it);
         startActivityForResult(it, 70);
-    }
+
+   }
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data)
+    {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode==70){
+        if(requestCode==70)
+        {
             if(resultCode==RESULT_OK){
                 String mesaj=data.getStringExtra("mesaj");
                 int suma=data.getIntExtra("suma", 0);
-                StringBuilder builder=new StringBuilder(mesaj);
+                StringBuilder builder=new StringBuilder("mesaj");
                 builder.append(" ").append(suma);
                 Toast.makeText(this, builder.toString(), Toast.LENGTH_LONG).show();
             }
