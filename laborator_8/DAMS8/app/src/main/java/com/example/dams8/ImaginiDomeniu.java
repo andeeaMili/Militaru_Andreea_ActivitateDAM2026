@@ -12,4 +12,37 @@ public class ImaginiDomeniu {
         this.imagine = imagine;
         this.link = link;
     }
+
+    public String getTextAfisat() {
+        return textAfisat;
+    }
+
+    public void setTextAfisat(String textAfisat) {
+        this.textAfisat = textAfisat;
+    }
+
+    public Bitmap getImagine() {
+        return imagine;
+    }
+
+    public void setImagine(Bitmap imagine) {
+        this.imagine = imagine;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
+
+    @Override
+    public String toString() {
+        return "ImaginiDomeniu{" +
+                "textAfisat='" + textAfisat + '\'' +
+                ", imagine=" + imagine +
+                ", link='" + link + '\'' +
+                '}';
+    }
 }

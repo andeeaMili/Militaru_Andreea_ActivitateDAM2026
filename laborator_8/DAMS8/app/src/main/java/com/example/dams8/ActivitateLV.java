@@ -5,6 +5,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -35,41 +36,83 @@ private         List<ImaginiDomeniu>lista=new ArrayList<>();
 
 
         });
-        List<String> linkuriImg=new ArrayList<>();
-        List<Bitmap>imagini=new ArrayList<>();
+        List<String> linkuriImg = new ArrayList<>();
+        List<Bitmap> imagini = new ArrayList<>();
         linkuriImg.add("https://www.kettleclub.co.uk/wp-content/themes/kettleclub/assets/img/brand-heroes/rolex.jpg");
         linkuriImg.add("https://lcdn.altex.ro/media/catalog/product/1/0/1000056883_05_ca6a70b2.jpg");
         linkuriImg.add("https://www.magazinuldepietre.ro/media/mageplaza/blog/post/c/e/ce_inseamna_karate_la_aur_ce_nu_stiai_despre_unitatea_de_masura_a_acestui_metal_pretios.jpg");
         linkuriImg.add("https://istyle.ro/cdn/shop/files/IMG-14772605_94c882eb-82b8-4b37-9349-acc53af23e60.jpg");
         linkuriImg.add("https://www.apple.com/newsroom/images/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/geo/Apple-iPhone-18-Pro-2up-Geo-260909_inline.jpg.large.jpg");
-   Executor executor= Executors.newSingleThreadExecutor();
-        Handler handler =new Handler(Looper.myLooper());
+        Executor executor = Executors.newSingleThreadExecutor();
+
+
+        Handler handler = new Handler(Looper.myLooper());
+
         executor.execute(new Runnable() {
             @Override
             public void run() {
+
                 for (String link : linkuriImg) {
                     HttpURLConnection con = null;
+
                     try {
                         URL url = new URL(link);
                         con = (HttpURLConnection) url.openConnection();
                         InputStream is = con.getInputStream();
                         imagini.add(BitmapFactory.decodeStream(is));
-                    } catch (Exception e) {
+                        is.close();
 
+                    } catch (Exception e) {
+                        imagini.add(null);
+                        e.printStackTrace();
+                    } finally {
+                        if (con != null) {
+                            con.disconnect();
+                        }
                     }
                 }
+
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        lista = new ArrayList<>();
+
+                        lista.add(new ImaginiDomeniu(
+                                "Ceas Rolex",
+                                imagini.get(0),
+                                "https://www.rolex.com/watches"));
+
+                        lista.add(new ImaginiDomeniu(
+                                "PS5",
+                                imagini.get(1),
+                                "https://www.playstation.com/ro-ro/ps5/"));
+
+                        lista.add(new ImaginiDomeniu(
+                                "Aur",
+                                imagini.get(2),
+                                "https://ro.wikipedia.org/wiki/Aur"));
+
+                        lista.add(new ImaginiDomeniu(
+                                "Casti",
+                                imagini.get(3),
+                                "https://www.apple.com/airpods/"));
+
+                        lista.add(new ImaginiDomeniu(
+                                "Telefon",
+                                imagini.get(4),
+                                "https://www.apple.com/iphone/"));
+
+                        ListView lv = findViewById(R.id.imagini);
+
+                        Adaptor adapter = new Adaptor(
+                                getApplicationContext(),
+                                R.layout.adaptorpersonalizat,
+                                lista);
+
+                        lv.setAdapter(adapter);
+                    }
+                });
             }
-        }) ;
-handler.post(new Runnable() {
-    @Override
-    public void run() {
-    lista=new ArrayList<>();
-    lista.add(new ImaginiDomeniu("Telefon", imagini.get(0),"https://www.apple.com/newsroom/images/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/geo/Apple-iPhone-18-Pro-2up-Geo-260909_inline.jpg.large.jpg" ) );
-    lista.add(new ImaginiDomeniu("Ceas", imagini.get(1), "https://www.kettleclub.co.uk/wp-content/themes/kettleclub/assets/img/brand-heroes/rolex.jpg"));
-    lista.add(new ImaginiDomeniu("Casti", imagini.get(2), "https://istyle.ro/cdn/shop/files/IMG-14772605_94c882eb-82b8-4b37-9349-acc53af23e60.jpg"));
-    lista.add(new ImaginiDomeniu("Aur", imagini.get(3),"https://www.magazinuldepietre.ro/media/mageplaza/blog/post/c/e/ce_inseamna_karate_la_aur_ce_nu_stiai_despre_unitatea_de_masura_a_acestui_metal_pretios.jpg"));
-    lista.add(new ImaginiDomeniu("PS5", imagini.get(4), "https://lcdn.altex.ro/media/catalog/product/1/0/1000056883_05_ca6a70b2.jpg"));
-    }
-});
-    }
-}
+        });
+    }}
