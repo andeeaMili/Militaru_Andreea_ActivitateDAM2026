@@ -7,7 +7,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowCompat;
 import androidx.core.view.WindowInsetsCompat;
-
+import android.content.Intent;
+import android.view.View;
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -21,4 +22,13 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
+
+    public void deschideLista(View view) {
+        Intent it = new Intent(
+                getApplicationContext(),
+                ActivitateLV.class
+        );
+        startActivity(it);
+    }
+
 }

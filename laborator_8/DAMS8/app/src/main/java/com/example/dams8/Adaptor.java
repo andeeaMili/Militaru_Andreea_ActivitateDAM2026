@@ -45,7 +45,7 @@ public class Adaptor extends BaseAdapter {
         View v = inflater.inflate(resursaLayout, null, false);
 
         TextView textTV = v.findViewById(R.id.textAfisatTV);
-        ImageView imagineIV = v.findViewById(R.id.imagineTV);
+        ImageView imagineIV = v.findViewById(R.id.imagineIV);
 
         ImaginiDomeniu imagine = (ImaginiDomeniu) getItem(i);
 
